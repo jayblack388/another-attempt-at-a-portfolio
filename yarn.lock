@@ -6828,10 +6828,10 @@ iterall@^1.1.3, iterall@^1.2.2:
   resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.2.2.tgz#92d70deb8028e0c39ff3164fdbf4d8b088130cd7"
   integrity sha512-yynBb1g+RFUPY64fTrFv7nsjRrENBQJaX2UL+2Szc9REFrSNm1rpSXHGzhmAy7a9uv3vlvgBlXnf9RqmPH1/DA==
 
-jdb-components@^0.1.24:
-  version "0.1.24"
-  resolved "https://registry.yarnpkg.com/jdb-components/-/jdb-components-0.1.24.tgz#c2714cce204cd48f9b815defc16bbef72022881d"
-  integrity sha512-x5H7BaLAeoqijrklHl5XB9z0vCrUgvJqOJxvC7YNAPFHNC5+xlS9+jsx2fuv+Ggz4eWfJQZisNpZD0gHq40vPQ==
+jdb-components@^0.1.25:
+  version "0.1.25"
+  resolved "https://registry.yarnpkg.com/jdb-components/-/jdb-components-0.1.25.tgz#907c23178acc2a86ec814469e9fc212d7c00f4be"
+  integrity sha512-PEDjlTdC3wGqYJhVR1QfBaunva0FLVJvfbcKZCKANS195caOiDla2bvzRnNkqQm7+jTWfT4YNTmRcwTXgLyWOw==
   dependencies:
     "@reach/router" "^1.2.1"
     "@types/reach__router" "^1.2.6"
