@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { Audio } from "jdb-components"
 import TopicCard from "./topicCard"
 import useThemeContext from "../hooks/themeContext"
 
@@ -28,6 +29,7 @@ export default () => {
   return (
     <>
       <h2 className={style === "dark" ? "text-white" : ""}>My Interests</h2>
+      <Audio />
       <p className={`f4 mb-4 ${style === "dark" ? "text-white" : "text-gray"}`}>
         Topics that I want to learn more about.
       </p>
