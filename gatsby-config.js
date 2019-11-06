@@ -3,7 +3,7 @@ require("dotenv").config({
 });
 module.exports = {
   siteMetadata: {
-    style: `light`,
+    style: `dark`,
     layout: `sidebar`
   },
   pathPrefix: process.env.PATH_PREFIX || "/",

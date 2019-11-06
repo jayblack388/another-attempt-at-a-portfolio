@@ -8,6 +8,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import favicon from "../images/favicon.ico"
 
 function SEO() {
   const {
@@ -32,6 +33,9 @@ function SEO() {
         lang: "en",
       }}
       title={name}
+      link={[
+        { rel: "shortcut icon", type: "image/x-icon", href: `${favicon}` },
+      ]}
     />
   )
 }
