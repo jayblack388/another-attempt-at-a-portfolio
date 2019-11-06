@@ -1,0 +1,54 @@
+{
+  "name": "gatsby-github-personal-website",
+  "private": false,
+  "description": "Repo for github portfolio using gatsby",
+  "homepage": "https://github.com/thakkaryash94/gatsby-github-personal-website",
+  "version": "0.1.0",
+  "author": "Yash Thakkar <thakkaryash94@gmail.com>",
+  "dependencies": {
+    "@primer/components": "^13.5.0",
+    "@primer/octicons-react": "^9.1.1",
+    "dotenv-webpack": "^1.7.0",
+    "gatsby": "^2.15.19",
+    "gatsby-plugin-react-helmet": "^3.1.8",
+    "gatsby-plugin-sass": "^2.1.15",
+    "gatsby-plugin-styled-components": "^3.1.6",
+    "gatsby-source-filesystem": "^2.1.25",
+    "gatsby-source-graphql": "^2.1.15",
+    "gatsby-transformer-remark": "^2.6.24",
+    "gatsby-transformer-yaml": "^2.2.10",
+    "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-emoji-render": "^1.0.0",
+    "react-helmet": "^5.2.1",
+    "react-toggle": "^4.0.2",
+    "styled-components": "^4.3.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1",
+    "prettier": "^1.18.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "publish": "gh-pages -d public",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "deploy": "npm run format && npm run build && npm run publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thakkaryash94/gatsby-github-personal-website"
+  },
+  "bugs": {
+    "url": "https://github.com/thakkaryash94/gatsby-github-personal-website/issues"
+  }
+}
