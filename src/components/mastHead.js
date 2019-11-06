@@ -1,6 +1,6 @@
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import Emoji from 'react-emoji-render'
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Emoji from "react-emoji-render"
 import {
   CircuitBoard,
   Link,
@@ -8,7 +8,7 @@ import {
   Mail,
   MarkGithub,
   Organization,
-} from '@primer/octicons-react'
+} from "@primer/octicons-react"
 import {
   StyledOcticon,
   Heading,
@@ -16,15 +16,15 @@ import {
   Box,
   Link as PrimerLink,
   BorderBox,
-  Text
-} from '@primer/components'
-import Toggle from 'react-toggle'
-import useSiteMetadata from '../hooks/siteMetaData'
-import useThemeContext from '../hooks/themeContext'
-import styled from 'styled-components'
+  Text,
+} from "@primer/components"
+import Toggle from "react-toggle"
+import useSiteMetadata from "../hooks/siteMetaData"
+import useThemeContext from "../hooks/themeContext"
+import styled from "styled-components"
 
 const StyledHr = styled.hr`
-  ${props => props.color === 'dark' && 'border-top-color: whitesmoke;'}
+  ${props => props.color === "dark" && "border-top-color: whitesmoke;"}
 `
 
 export default ({ metaData }) => {
@@ -32,7 +32,7 @@ export default ({ metaData }) => {
   const { style, theme, setTheme } = useThemeContext()
 
   function onThemeChange(e) {
-    const newStyle = e.target.checked ? 'dark' : 'light'
+    const newStyle = e.target.checked ? "dark" : "light"
     setTheme(newStyle)
   }
 
@@ -67,15 +67,15 @@ export default ({ metaData }) => {
       }
     `
   )
-  const StackedMeta = props =>
-    <Box {...props} display={[null, null, 'inline-block']} mr={3} />
+  const StackedMeta = props => (
+    <Box {...props} display={[null, null, "inline-block"]} mr={3} />
+  )
 
-  const SideMeta = props =>
-    <Box {...props} display={'flex'} alignItems={'center'} mb={3} />
+  const SideMeta = props => (
+    <Box {...props} display={"flex"} alignItems={"center"} mb={3} />
+  )
 
-  const MetaComponent = layout === 'stacked'
-    ? StackedMeta
-    : SideMeta
+  const MetaComponent = layout === "stacked" ? StackedMeta : SideMeta
 
   const {
     websiteUrl,
@@ -98,10 +98,14 @@ export default ({ metaData }) => {
         className="circle"
         mb={3}
         size={150}
-        borderRadius={'50%'}
-        maxWidth={'150px'}
+        borderRadius={"50%"}
+        maxWidth={"150px"}
       />
-      <Heading color={style === 'dark' ? 'white' : undefined} mb={2} lh={'condensed'}>
+      <Heading
+        color={style === "dark" ? "white" : undefined}
+        mb={2}
+        lh={"condensed"}
+      >
         {name ? name : login}
       </Heading>
       <Box fontSize={4} mb={2}>
@@ -117,7 +121,7 @@ export default ({ metaData }) => {
             />
             <PrimerLink
               href={`https://github.com/${login}`}
-              color={style === 'dark' ? 'white' : undefined}
+              color={style === "dark" ? "white" : undefined}
             >
               {login}
             </PrimerLink>
@@ -126,7 +130,7 @@ export default ({ metaData }) => {
       </Box>
       <StyledHr color={style} />
       {isDeveloperProgramMember && (
-        <MetaComponent color={style === 'dark' ? 'white' : undefined}>
+        <MetaComponent color={style === "dark" ? "white" : undefined}>
           <StyledOcticon
             color={theme.iconColor}
             icon={CircuitBoard}
@@ -136,24 +140,32 @@ export default ({ metaData }) => {
             ariaLabel="Location"
           />
           <BorderBox
-            as={'span'} fontSize={5} border={0}
-            color={'white'} bg={'green.5'} py={1} px={2}
+            as={"span"}
+            fontSize={5}
+            border={0}
+            color={"white"}
+            bg={"green.5"}
+            py={1}
+            px={2}
             title="Developer Program Member"
-            display={'inline-block'} borderRadius={2}
+            display={"inline-block"}
+            borderRadius={2}
           >
             Developer Program Member
-          </BorderBox >
+          </BorderBox>
         </MetaComponent>
       )}
       <Text
-        as={'p'} mb={3} fontSize={2}
-        color={style === 'dark' ? 'white' : 'gray.5'}
+        as={"p"}
+        mb={3}
+        fontSize={2}
+        color={style === "dark" ? "white" : "gray.5"}
       >
-        <Emoji text={bio || ''} />
+        <Emoji text={bio || ""} />
       </Text>
       <Box mb={6} fontSize={4}>
         {company && (
-          <MetaComponent color={style === 'dark' ? 'white' : undefined}>
+          <MetaComponent color={style === "dark" ? "white" : undefined}>
             <StyledOcticon
               color={theme.iconColor}
               icon={Organization}
@@ -166,7 +178,7 @@ export default ({ metaData }) => {
           </MetaComponent>
         )}
         {location && (
-          <MetaComponent color={style === 'dark' ? 'white' : undefined}>
+          <MetaComponent color={style === "dark" ? "white" : undefined}>
             <StyledOcticon
               color={theme.iconColor}
               icon={Location}
@@ -190,7 +202,7 @@ export default ({ metaData }) => {
             />
             <PrimerLink
               href={`mailto:${email}`}
-              color={style === 'dark' ? 'white' : undefined}
+              color={style === "dark" ? "white" : undefined}
             >
               {email}
             </PrimerLink>
@@ -208,7 +220,7 @@ export default ({ metaData }) => {
             />
             <PrimerLink
               href={websiteUrl}
-              color={style === 'dark' ? 'white' : undefined}
+              color={style === "dark" ? "white" : undefined}
             >
               {websiteUrl}
             </PrimerLink>
@@ -216,22 +228,28 @@ export default ({ metaData }) => {
         )}
         {isHireable && (
           <BorderBox
-            display={'inline-block'} fontSize={5} borderRadius={2}
-            bg={'green.5'} py={1} px={2} title="Hire me" border={0}
+            display={"inline-block"}
+            fontSize={5}
+            borderRadius={2}
+            bg={"green.5"}
+            py={1}
+            px={2}
+            title="Hire me"
+            border={0}
           >
             Available for hire
           </BorderBox>
         )}
         <StyledHr color={style} />
         <Box mb={1}>
-          <Heading mb={2} fontSize={4} color={style === 'dark' && 'white'}>
+          <Heading mb={2} fontSize={4} color={style === "dark" && "white"}>
             Organizations
           </Heading>
           {organizations &&
             organizations.nodes.map(({ avatarUrl }) => (
               <PrimerLink
-                className={'avatar-group-item'}
-                style={{ cursor: 'pointer' }}
+                className={"avatar-group-item"}
+                style={{ cursor: "pointer" }}
                 key={avatarUrl}
               >
                 <Avatar size={35} mr={2} src={avatarUrl} />
@@ -240,7 +258,7 @@ export default ({ metaData }) => {
         </Box>
         <Box mt={16}>
           <Toggle
-            defaultChecked={style === 'dark'}
+            defaultChecked={style === "dark"}
             onChange={onThemeChange}
             icons={{
               checked: (

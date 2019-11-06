@@ -6,22 +6,16 @@
  */
 
 import React, { useEffect } from "react"
-import useThemeContext from '../hooks/themeContext'
+import useThemeContext from "../hooks/themeContext"
 
 import "./layout.scss"
 
 function Layout({ children }) {
   const { theme } = useThemeContext()
-  useEffect(
-    () => {
-      document.body.style.backgroundColor = theme.background
-    },
-    [theme.background]
-  )
-  return (
-    <main>{children}</main>
-  )
+  useEffect(() => {
+    document.body.style.backgroundColor = theme.background
+  }, [theme.background])
+  return <main>{children}</main>
 }
-
 
 export default Layout
