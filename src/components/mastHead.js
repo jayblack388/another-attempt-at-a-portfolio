@@ -84,7 +84,6 @@ export default ({ metaData }) => {
     email,
     organizations,
     avatarUrl,
-    isHireable,
     name,
     location,
     isDeveloperProgramMember,

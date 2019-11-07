@@ -6,7 +6,7 @@ import useThemeContext from "../hooks/themeContext"
 import MastHead from "../components/mastHead"
 import Projects from "../components/projects"
 import Interests from "../components/interests"
-import Thoughts from "../components/thoughts"
+// import Thoughts from "../components/thoughts"
 import SEO from "../components/seo"
 import useSiteMetadata from "../hooks/siteMetaData"
 
