@@ -25,9 +25,9 @@ function IndexPage() {
           <div className="my-6">
             <Interests />
           </div>
-          <div className="my-6">
+          {/* <div className="my-6">
             <Thoughts />
-          </div>
+          </div> */}
         </div>
       ) : (
         <div className={`d-md-flex ${style !== "dark" && "border-md-bottom"}`}>
@@ -49,7 +49,7 @@ function IndexPage() {
             <div className="mx-auto" style={{ maxWidth: "900px" }}>
               <Projects />
               <Interests />
-              <Thoughts />
+              {/* <Thoughts /> */}
             </div>
           </div>
         </div>
