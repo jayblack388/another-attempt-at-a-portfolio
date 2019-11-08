@@ -192,7 +192,8 @@ export default ({ metaData }) => {
       >
         <Emoji text={bio || ""} />
       </Text>
-      <Box mb={6} fontSize={4}>
+      <StyledHr color={style} />
+      <Box mb={0} fontSize={4}>
         {company && (
           <MetaComponent color={style === "dark" ? "white" : undefined}>
             <StyledOcticon
@@ -255,7 +256,6 @@ export default ({ metaData }) => {
             </PrimerLink>
           </MetaComponent>
         )}
-        ƒ{" "}
         <BorderBox
           display={"inline-block"}
           fontSize={5}
@@ -268,7 +268,6 @@ export default ({ metaData }) => {
         >
           Available for hire
         </BorderBox>
-        ƒ <StyledHr color={style} />
         {organizations && organizations.nodes.length > 0 && (
           <Box mb={1}>
             <Heading mb={2} fontSize={4} color={style === "dark" && "white"}>
