@@ -4,7 +4,11 @@
   "description": "Repo for github portfolio using gatsby",
   "homepage": "https://github.com/thakkaryash94/gatsby-github-personal-website",
   "version": "0.1.0",
-  "author": "Yash Thakkar <thakkaryash94@gmail.com>",
+  "author": {
+    "name": "John Blackwell",
+    "email": "jblackwell072588@gmail.com",
+    "url": "https://johnblackwell.dev"
+  },
   "dependencies": {
     "@primer/components": "^13.5.0",
     "@primer/octicons-react": "^9.1.1",
