@@ -4,7 +4,7 @@ import { Theme } from "jdb-components"
 import { ThemeContextProvider } from "./src/theme-context"
 
 export const wrapRootElement = ({ element }) => (
-  <ThemeProvider theme={Theme}>
+  <ThemeProvider theme={Theme({ darkMode: false })}>
     <ThemeContextProvider>{element}</ThemeContextProvider>
   </ThemeProvider>
 )
