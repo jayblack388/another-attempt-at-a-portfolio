@@ -279,7 +279,7 @@ export default ({ metaData }) => {
             title="Resume"
             border={0}
           >
-            <a style={{textDecoration: 'none'}} download href={pdf}>Grab my resume</a>
+            <a style={{textDecoration: 'none', color: '#24292e'}} download href={pdf}>Grab my resume</a>
           </BorderBox>
         </div>
         {organizations && organizations.nodes.length > 0 && (
