@@ -18,11 +18,11 @@ import {
   BorderBox,
   Text,
 } from "@primer/components"
+import styled from "styled-components"
 import Toggle from "react-toggle"
 import useSiteMetadata from "../hooks/siteMetaData"
 import useThemeContext from "../hooks/themeContext"
-import styled from "styled-components"
-
+import pdf from '../John_Blackwell_2019_resume.pdf'
 const StyledHr = styled.hr`
   ${props => props.color === "dark" && "border-top-color: whitesmoke;"}
 `
@@ -256,18 +256,32 @@ export default ({ metaData }) => {
             </PrimerLink>
           </MetaComponent>
         )}
-        <BorderBox
-          display={"inline-block"}
-          fontSize={5}
-          borderRadius={2}
-          bg={"green.5"}
-          py={1}
-          px={2}
-          title="Hire me"
-          border={0}
-        >
-          Available for hire
-        </BorderBox>
+        <div style={{ display: "flex" }}>
+          <BorderBox
+            display={"inline-block"}
+            fontSize={5}
+            borderRadius={2}
+            bg={"green.5"}
+            py={1}
+            px={2}
+            title="Hire me"
+            border={0}
+          >
+            Available for hire
+          </BorderBox>
+          <BorderBox
+            display={"inline-block"}
+            fontSize={5}
+            borderRadius={2}
+            bg={"blue.5"}
+            py={1}
+            px={2}
+            title="Resume"
+            border={0}
+          >
+            <a style={{textDecoration: 'none'}} download href={pdf}>Grab my resume</a>
+          </BorderBox>
+        </div>
         {organizations && organizations.nodes.length > 0 && (
           <Box mb={1}>
             <Heading mb={2} fontSize={4} color={style === "dark" && "white"}>
