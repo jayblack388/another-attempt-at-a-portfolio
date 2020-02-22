@@ -1,7 +1,7 @@
 topics:
   - name: Styled Components
     web_url: https://www.styled-components.com/
-    image_url: https://www.styled-components.com/static/logo.png
+    image_url: https://styled-components.com/atom.png
 
   - name: Sass
     web_url: https://github.com/topics/sass
