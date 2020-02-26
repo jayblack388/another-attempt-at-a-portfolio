@@ -1,6 +1,5 @@
 ---
 title: 'Managing Multiple Git Profiles'
-published: false
 tags: ['git', 'cli']
 excerpt: 'A quick guide to setting up multiple git profiles and swapping between them'
 ---
