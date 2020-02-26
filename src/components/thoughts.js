@@ -31,6 +31,7 @@ function Thoughts() {
 			}
 		`
 	);
+	console.log(edges)
 	return edges.length > 0 ? (
 		<>
 			<h2 className={style === 'dark' ? 'text-white' : ''}>

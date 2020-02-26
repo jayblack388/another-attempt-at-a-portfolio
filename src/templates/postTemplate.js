@@ -1,16 +1,35 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Octicon, { ChevronLeft } from '@primer/octicons-react';
+import styled from 'styled-components';
 import Layout from '../components/layout';
 import MastHead from '../components/mastHead';
 import useSiteMetadata from '../hooks/siteMetaData';
 import useThemeContext from '../hooks/themeContext';
 import { formatePostDate } from '../components/postCard';
 
+const ContentContainer = styled.div`
+	p > code {
+		background: ${({ darkMode }) => (darkMode ? '#ffffff' : '#2f363d')};
+		border-radius: 0.7rem;
+		padding: 0 0.5rem;
+	}
+	pre {
+		background: ${({ darkMode }) => (darkMode ? '#ffffff' : '#2f363d')};
+		border-radius: 0.7rem;
+		padding: 1rem 3rem;
+	}
+	code {
+		color: ${({ darkMode }) => (darkMode ? '#2f363d' : '#ffffff')};
+		font-weight: bold;
+	}
+`;
+
 export default ({ data }) => {
 	const { style } = useThemeContext();
 	const { layout } = useSiteMetadata();
 	const post = data.markdownRemark;
+	console.log(style);
 	return (
 		<Layout>
 			{layout === 'stacked' ? (
@@ -104,7 +123,8 @@ export default ({ data }) => {
 											`${post.fields.postDate}`
 										)}
 									</p>
-									<div
+									<ContentContainer
+										darkMode={style === 'dark'}
 										dangerouslySetInnerHTML={{
 											__html: post.html,
 										}}
