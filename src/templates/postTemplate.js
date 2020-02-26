@@ -9,6 +9,12 @@ import useThemeContext from '../hooks/themeContext';
 import { formatePostDate } from '../components/postCard';
 
 const ContentContainer = styled.div`
+	a {
+		background-clip: text;
+		background: -webkit-linear-gradient(45deg, #08aeea 0%, #2af598 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
 	p > code {
 		background: ${({ darkMode }) => (darkMode ? '#ffffff' : '#2f363d')};
 		border-radius: 0.7rem;
