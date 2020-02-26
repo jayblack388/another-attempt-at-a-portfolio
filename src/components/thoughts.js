@@ -4,21 +4,20 @@ import PostCard from './postCard';
 import useThemeContext from '../hooks/themeContext';
 
 function Thoughts() {
+	const today = new Date().toISOString().slice(0, 10);
 	const { style } = useThemeContext();
 	const {
 		allMarkdownRemark: { edges },
 	} = useStaticQuery(
 		graphql`
 			query {
-				allMarkdownRemark(
-					limit: 6
-					filter: { frontmatter: { published: { eq: true } } }
-				) {
+				allMarkdownRemark(limit: 6) {
 					edges {
 						node {
 							frontmatter {
 								title
-								published
+								tags
+								excerpt
 							}
 							fields {
 								slug
@@ -31,8 +30,8 @@ function Thoughts() {
 			}
 		`
 	);
-	console.log(edges)
-	return edges.length > 0 ? (
+	const filteredEdges = edges.filter(edge =>  edge.node.fields.postDate <= today && edge);
+	return filteredEdges.length > 0 ? (
 		<>
 			<h2 className={style === 'dark' ? 'text-white' : ''}>
 				My Thoughts
@@ -44,7 +43,7 @@ function Thoughts() {
 				Articles I've written.
 			</p>
 			<div className='d-sm-flex flex-wrap gutter-condensed mb-4'>
-				{edges.map((edge, index) => (
+				{filteredEdges.map((edge, index) => (
 					<div
 						key={index}
 						className='col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3'>
