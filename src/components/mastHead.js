@@ -245,7 +245,7 @@ export default ({ metaData }) => {
 							ariaLabel='email'
 						/>
 						<PrimerLink
-							href={websiteUrl}
+							href={`https://${websiteUrl}`}
 							color={style === 'dark' ? 'white' : undefined}>
 							{websiteUrl}
 						</PrimerLink>
