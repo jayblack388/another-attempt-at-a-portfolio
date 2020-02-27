@@ -15,7 +15,9 @@ const GlobalStyles = createGlobalStyle`
 
 export const wrapRootElement = ({ element }) => (
 	<ThemeProvider theme={Theme({ darkMode: false })}>
-    <GlobalStyles />
-		<ThemeContextProvider>{element}</ThemeContextProvider>
+		<ThemeContextProvider>
+			<GlobalStyles />
+			{element}
+		</ThemeContextProvider>
 	</ThemeProvider>
 );
