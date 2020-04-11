@@ -1,15 +1,19 @@
 import React from 'react';
 import Emoji from 'react-emoji-render';
+import { motion } from 'framer-motion';
 import useThemeContext from '../hooks/themeContext';
 
 function RepoCard({ repository }) {
 	const { style } = useThemeContext();
 	return (
-		<div
+		<motion.div
+			whileHover={{
+				scale: 1.1,
+			}}
 			style={{ minHeight: 150, display: 'flex', flexDirection: 'column' }}
 			className={`github-component height-full text-left ${
 				style === 'dark' ? 'box-shadow' : 'border border-gray-light'
-			} bg-white rounded-1 p-3 bg-blue-light`}>
+			} bg-white rounded-4 p-3 bg-blue-light`}>
 			<div className='d-flex flex-justify-between flex-items-start mb-1'>
 				<h1 className='f4 lh-condensed mb-1'>
 					<a href={repository.url}>
@@ -68,7 +72,7 @@ function RepoCard({ repository }) {
 					<a href={repository.homepageUrl}>Visit the live site</a>
 				)}
 			</div>
-		</div>
+		</motion.div>
 	);
 }
 
