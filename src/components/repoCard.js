@@ -12,8 +12,8 @@ function RepoCard({ repository }) {
 			}}
 			style={{ minHeight: 150, display: 'flex', flexDirection: 'column' }}
 			className={`github-component height-full text-left ${
-				style === 'dark' ? 'box-shadow' : 'border border-gray-light'
-			} bg-white rounded-4 p-3 bg-blue-light`}>
+				style === 'dark' ? 'box-shadow bg-gray-light' : 'border bg-blue-light border-gray-light'
+			}  rounded-4 p-3 `}>
 			<div className='d-flex flex-justify-between flex-items-start mb-1'>
 				<h1 className='f4 lh-condensed mb-1'>
 					<a href={repository.url}>

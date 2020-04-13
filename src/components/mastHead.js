@@ -16,7 +16,6 @@ import {
 	Box,
 	Link as PrimerLink,
 	BorderBox,
-	Text,
 } from '@primer/components';
 import styled from 'styled-components';
 import Toggle from 'react-toggle';
@@ -25,6 +24,19 @@ import useThemeContext from '../hooks/themeContext';
 import pdf from '../John_Blackwell_2019_resume.pdf';
 const StyledHr = styled.hr`
 	${props => props.color === 'dark' && 'border-top-color: whitesmoke;'}
+`;
+
+const Text = styled.p`
+	color: ${({ themeColor }) => (themeColor === 'dark' ? 'white' : '#666666')};
+	font-size: ${({ fontSize }) =>
+		fontSize === 4
+			? '2rem'
+			: fontSize === 3
+			? '1.2rem'
+			: fontSize === 2
+			? '0.95rem'
+			: '0.875rem'};
+	${({ bold }) => bold && 'font-weight: bold;'}
 `;
 
 export default ({ metaData }) => {
@@ -100,12 +112,9 @@ export default ({ metaData }) => {
 				borderRadius={'50%'}
 				maxWidth={'150px'}
 			/>
-			<Heading
-				color={style === 'dark' ? 'white' : undefined}
-				mb={2}
-				lh={'condensed'}>
+			<Text bold fontSize={4} themeColor={style} mb={2}>
 				{name ? name : login}
-			</Heading>
+			</Text>
 			<Box
 				fontSize={4}
 				display={'flex'}
@@ -180,11 +189,7 @@ export default ({ metaData }) => {
 					</BorderBox>
 				</MetaComponent>
 			)}
-			<Text
-				as={'p'}
-				mb={3}
-				fontSize={2}
-				color={style === 'dark' ? 'white' : 'gray.5'}>
+			<Text fontSize={2} themeColor={style}>
 				<Emoji text={bio || ''} />
 			</Text>
 			<StyledHr color={style} />
@@ -200,7 +205,9 @@ export default ({ metaData }) => {
 							mr={2}
 							ariaLabel='Location'
 						/>
-						{company}
+						<Text fontSize={1} themeColor={style}>
+							{company}
+						</Text>
 					</MetaComponent>
 				)}
 				{location && (
@@ -214,7 +221,9 @@ export default ({ metaData }) => {
 							mr={2}
 							ariaLabel='Location'
 						/>
-						{location}
+						<Text fontSize={1} themeColor={style}>
+							{location}
+						</Text>
 					</MetaComponent>
 				)}
 				{email && (
@@ -253,17 +262,16 @@ export default ({ metaData }) => {
 				)}
 				<div style={{ display: 'flex', justifyContent: 'center' }}>
 					{/* <BorderBox
-            display={"inline-block"}
-            fontSize={5}
-            borderRadius={2}
-            bg={"green.5"}
-            py={1}
-            px={2}
-            title="Hire me"
-            border={0}
-          >
-            Available for hire
-          </BorderBox> */}
+						display={'inline-block'}
+						fontSize={5}
+						borderRadius={2}
+						bg={'green.5'}
+						py={1}
+						px={2}
+						title='Hire me'
+						border={0}>
+						Available for hire
+					</BorderBox> */}
 					<BorderBox
 						display={'inline-block'}
 						fontSize={5}
