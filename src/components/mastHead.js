@@ -11,7 +11,6 @@ import {
 } from '@primer/octicons-react';
 import {
 	StyledOcticon,
-	Heading,
 	Avatar,
 	Box,
 	Link as PrimerLink,
@@ -291,12 +290,9 @@ export default ({ metaData }) => {
 				</div>
 				{organizations && organizations.nodes.length > 0 && (
 					<Box mb={1}>
-						<Heading
-							mb={2}
-							fontSize={4}
-							color={style === 'dark' && 'white'}>
+						<Text mb={2} fontSize={3} themeColor={style}>
 							Organizations
-						</Heading>
+						</Text>
 						{organizations.nodes.map(({ avatarUrl }) => (
 							<PrimerLink
 								className={'avatar-group-item'}
