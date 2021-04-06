@@ -1,24 +1,24 @@
 topics:
-  - name: Styled Components
-    web_url: https://www.styled-components.com/
-    image_url: https://styled-components.com/atom.png
+  - name: React
+    web_url: https://reactjs.org/
+    image_url: https://res.cloudinary.com/dvjmyp3nz/image/upload/v1617744908/Logos/React.svg
+
+  - name: graphQl
+    web_url: https://graphql.org/
+    image_url: https://res.cloudinary.com/dvjmyp3nz/image/upload/v1617744908/Logos/GraphQL.svg
 
   - name: Sass
     web_url: https://github.com/topics/sass
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
-
-  - name: React
-    web_url: https://reactjs.org/
-    image_url: https://cdn.worldvectorlogo.com/logos/react.svg
+    image_url: https://res.cloudinary.com/dvjmyp3nz/image/upload/v1617744908/Logos/Sass.svg
 
   - name: Node.js
     web_url: https://nodejs.org/
-    image_url: https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png
+    image_url: https://res.cloudinary.com/dvjmyp3nz/image/upload/v1617744908/Logos/Node.svg
 
-  - name: mongoDB
-    web_url: https://www.mongodb.com/
-    image_url: https://xebialabs.com/wp-content/uploads/files/tool-chest/mongodb.jpg
+  - name: Typescript
+    web_url: https://www.typescriptlang.org/
+    image_url: https://res.cloudinary.com/dvjmyp3nz/image/upload/v1617744908/Logos/Typescript.svg
 
   - name: Ruby on Rails
     web_url: https://rubyonrails.org/
-    image_url: https://pbs.twimg.com/media/CZGHPChUAAA3jqE.png
+    image_url: https://res.cloudinary.com/dvjmyp3nz/image/upload/v1617744908/Logos/Rails.svg
