@@ -7,7 +7,7 @@ function Projects() {
 	const { style } = useThemeContext();
 	const {
 		github: {
-			viewer: { pinnedRepositories },
+			viewer: { pinnedItems },
 		},
 	} = useStaticQuery(
 		graphql`
@@ -15,24 +15,22 @@ function Projects() {
 				github {
 					viewer {
 						name
-						pinnedRepositories(
-							privacy: PUBLIC
-							affiliations: OWNER
-							first: 6
-							orderBy: { field: CREATED_AT, direction: DESC }
-						) {
+						pinnedItems(first: 6) {
 							nodes {
-								owner {
-									login
+								... on GitHub_Repository {
+									id
+									name
+									owner {
+										login
+									}
+									url
+									description
+									stargazers {
+										totalCount
+									}
+									homepageUrl
+									forkCount
 								}
-								name
-								url
-								description
-								stargazers {
-									totalCount
-								}
-								forkCount
-								homepageUrl
 							}
 						}
 					}
@@ -52,7 +50,7 @@ function Projects() {
 				GitHub repositories that I've built.
 			</p>
 			<div className='d-sm-flex flex-wrap gutter-condensed mb-4'>
-				{pinnedRepositories.nodes.map((repository, i) => (
+				{pinnedItems.nodes.map((repository, i) => (
 					<div
 						key={i}
 						className='col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3'>

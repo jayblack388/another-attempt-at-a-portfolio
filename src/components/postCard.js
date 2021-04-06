@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion'
 import { Link } from 'gatsby';
 import useThemeContext from '../hooks/themeContext';
 
@@ -14,8 +15,11 @@ export function formatePostDate(dateString) {
 function PostCard({ post }) {
 	const { style } = useThemeContext();
 	return (
-		<div
-			className={`height-full text-left ${
+		<motion.div
+			whileHover={{
+				scale: 1.05,
+			}}
+			className={`height-full text-left d-flex flex-column flex-justify-between ${
 				style === 'dark' ? 'box-shadow' : 'border border - gray - light'
 			} bg-white rounded-1 p-3`}>
 			<div className='d-flex flex-justify-between flex-items-start mb-1'>
@@ -26,7 +30,7 @@ function PostCard({ post }) {
 			<div className='text-gray mb-2 ws-normal'>
 				{formatePostDate(`${post.fields.postDate}`)}
 			</div>
-		</div>
+		</motion.div>
 	);
 }
 

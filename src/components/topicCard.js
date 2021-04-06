@@ -1,26 +1,22 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 function TopicCard({ topic }) {
-	const styledStyle = {
-		background:
-			'linear-gradient(20deg, rgb(219, 112, 147), rgb(218, 163, 87))',
-	};
 	return (
-		<div className='border border-gray-light rounded-1 bg-blue-light p-5'>
+		<motion.div
+			whileHover={{
+				scale: 1.05,
+			}}
+			className='border border-gray-light rounded-1 bg-blue-light p-5'>
 			{topic.web_url ? (
 				<a
 					href={topic.web_url}
-					className='github-component position-relative hover-grow height-full no-underline d-flex flex-column flex-justify-center text-center'>
+					className='github-component position-relative height-full no-underline d-flex flex-column flex-justify-center text-center'>
 					{topic.image_url ? (
 						<img
 							src={topic.image_url}
 							width='64'
 							height='64'
-							style={
-								topic.name === 'Styled Components'
-									? styledStyle
-									: {}
-							}
 							className='mx-auto rounded-1 mb-3'
 							alt={topic.name}
 						/>
@@ -75,7 +71,7 @@ function TopicCard({ topic }) {
 					)}
 				</div>
 			)}
-		</div>
+		</motion.div>
 	);
 }
 

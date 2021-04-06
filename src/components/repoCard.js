@@ -8,7 +8,7 @@ function RepoCard({ repository }) {
 	return (
 		<motion.div
 			whileHover={{
-				scale: 1.1,
+				scale: 1.05,
 			}}
 			style={{ minHeight: 150, display: 'flex', flexDirection: 'column' }}
 			className={`github-component height-full text-left ${

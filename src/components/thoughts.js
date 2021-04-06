@@ -30,7 +30,21 @@ function Thoughts() {
 			}
 		`
 	);
-	const filteredEdges = edges.filter(edge =>  edge.node.fields.postDate <= today && edge);
+	const filteredEdges = edges
+		.filter(edge => edge.node.fields.postDate <= today)
+		.sort((a, b) => {
+			const aDate = a.node.fields.postDate;
+			const bDate = b.node.fields.postDate;
+			if (aDate < bDate) {
+				return -1;
+			}
+			if (aDate > bDate) {
+				return 1;
+			}
+
+			// names must be equal
+			return 0;
+		});
 	return filteredEdges.length > 0 ? (
 		<>
 			<h2 className={style === 'dark' ? 'text-white' : ''}>

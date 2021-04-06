@@ -20,7 +20,7 @@ import styled from 'styled-components';
 import Toggle from 'react-toggle';
 import useSiteMetadata from '../hooks/siteMetaData';
 import useThemeContext from '../hooks/themeContext';
-import pdf from '../John_Blackwell_2019_resume.pdf';
+import pdf from '../John_Blackwell_Resume.pdf';
 const StyledHr = styled.hr`
 	${props => props.color === 'dark' && 'border-top-color: whitesmoke;'}
 `;
@@ -290,7 +290,7 @@ export default ({ metaData }) => {
 				</div>
 				{organizations && organizations.nodes.length > 0 && (
 					<Box mb={1}>
-						<Text mb={2} fontSize={3} themeColor={style}>
+						<Text bold mb={2} fontSize={3} themeColor={style}>
 							Organizations
 						</Text>
 						{organizations.nodes.map(({ avatarUrl }) => (
