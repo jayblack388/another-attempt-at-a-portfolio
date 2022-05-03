@@ -71,6 +71,7 @@ export default ({ metaData }) => {
 						organizations(first: 10) {
 							nodes {
 								avatarUrl
+								name
 							}
 						}
 					}
@@ -293,10 +294,11 @@ export default ({ metaData }) => {
 						<Text bold mb={2} fontSize={3} themeColor={style}>
 							Organizations
 						</Text>
-						{organizations.nodes.map(({ avatarUrl }) => (
+						{organizations.nodes.map(({ avatarUrl, name }) => (
 							<PrimerLink
 								className={'avatar-group-item'}
 								style={{ cursor: 'pointer' }}
+								title={name}
 								key={avatarUrl}>
 								<Avatar size={35} mr={2} src={avatarUrl} />
 							</PrimerLink>
