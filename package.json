@@ -22,7 +22,7 @@
     "gatsby-remark-prismjs": "^3.3.31",
     "gatsby-source-filesystem": "^2.1.25",
     "gatsby-source-graphql": "^2.1.15",
-    "gatsby-transformer-remark": "^2.6.53",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-yaml": "^2.2.10",
     "jdb-components": "^0.1.37",
     "node-sass": "^4.12.0",
